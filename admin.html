@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/log.css">
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username === "admin" && password === "admin") {
+                alert("welcome Admin !");
+                window.location.href = "adminpage.php";
+            } else {
+                alert("Please, try again");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <form onsubmit="validateForm(); return false;">
+        <h3>Admin Login</h3>
+
+        <label for="username">Login</label>
+        <input type="text" placeholder="Username" id="username" name="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password">
+
+        <button type="submit">Log In</button>
+        <div class="hyp"><br><br>
+            <a href="homepage.html">HomePage</a>
+        </div>
+    </form>
+</body>
+</html>
